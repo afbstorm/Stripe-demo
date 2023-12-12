@@ -1,0 +1,13 @@
+<div class="helper-text"> {{ paymentMessageText }} </div>
+<div class="row">
+  <div class="col s4" *ngFor="let product of productList">
+    <div class="card small ">
+      <div class="card-content">
+        <h1 class="card-title">Available products</h1>
+            <h4>{{ product.name }}</h4>
+            <p>{{ product.description }}</p>
+            <button (click)="initializePayment(product)"> Payment of {{ product.amount }}$ </button>
+      </div>
+    </div>
+  </div>
+</div>
